@@ -1,3 +1,4 @@
+# coding=utf-8
 # utils
 import json
 import datetime
@@ -13,4 +14,13 @@ def writeFileLog(data, filepathname):
 		else:
 			f.write(str(data) + '\n')
 
+
+def currentDate():
+
+	# get current local time and utc time
+	localnow = datetime.now()
+	utcnow = datetime.utcnow()
+	#seed =  isoformat_offset(datetime.now(),0) # +"+00:00"
+	print localnow.strftime('%Y-%m-%dT%H:%M:%S+00:00')
+	print utcnow.strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
